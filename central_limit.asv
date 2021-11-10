@@ -1,6 +1,0 @@
-a=textread('central_limit.txt');
-
-
-
-mean(a)
-var(a)
