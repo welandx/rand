@@ -1,7 +1,7 @@
 a=textread('mersenne_twister.txt');
-x=linspace(0,1);
-y=pdf('Normal',x,0.4991,0.2860);
-plot(x,y,'LineWidth',2)
+x=linspace(-0.5,1.5,10000);
+y=ksdensity(a,x,'function','cdf')
+plot(x,y)
 mu=mean(a)
 sigma=sqrt(var(a))
 
