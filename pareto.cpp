@@ -9,7 +9,7 @@ int main() {
   random_device seed;
   mt19937 gen(seed());
   uniform_real_distribution<> dis(0, 1);
-  string file_name = "mersenne_twister.txt";
+  string file_name = "pareto.txt";
   ofstream ofs(file_name, ofstream::out);
   for (int n = 0; n < 100000; ++n) {
     double v = dis(gen);
