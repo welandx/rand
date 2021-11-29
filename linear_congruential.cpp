@@ -1,8 +1,8 @@
 // C++ implementation of the
 // above approach
 #include <bits/stdc++.h>
-#include <iostream>
 #include <fstream>
+#include <iostream>
 using namespace std;
 // Function to generate random numbers
 void linearCongruentialMethod(int Xo, int m, int a, int c,
@@ -18,13 +18,13 @@ void linearCongruentialMethod(int Xo, int m, int a, int c,
 }
 // Driver Code
 int main() {
-  int Xo = 5; // Seed value
-  int m =2147483647 ;  // Modulus parameter
-  int a =16807;  // Multiplier term
-  int c =0;  // Increment term
+  int Xo = 5;         // Seed value
+  int m = 2147483647; // Modulus parameter
+  int a = 16807;      // Multiplier term
+  int c = 0;          // Increment term
   double randout;
-  string file_name="linear_congruential.txt";
-  ofstream ofs (file_name,ofstream::out);
+  string file_name = "linear_congruential.txt";
+  ofstream ofs(file_name, ofstream::out);
   // Number of Random numbers
   // to be generated
   int noOfRandomNums = 10000;
@@ -33,12 +33,12 @@ int main() {
   // Function Call
   linearCongruentialMethod(Xo, m, a, c, randomNums, noOfRandomNums);
   // Print the generated random numbers
-  for (int i = 0; i < noOfRandomNums-1; i++) {
-    randout=abs(randomNums[i]%1000*0.001);
+  for (int i = 0; i < noOfRandomNums - 1; i++) {
+    randout = abs(randomNums[i] % 1000 * 0.001);
     ofs << randout << " ";
   }
-  randout=abs(randomNums[noOfRandomNums-1]%1000*0.001);
-  ofs<<randout<<endl;
+  randout = abs(randomNums[noOfRandomNums - 1] % 1000 * 0.001);
+  ofs << randout << endl;
   ofs.close();
   return 0;
 }

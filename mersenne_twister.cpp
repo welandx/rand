@@ -11,7 +11,7 @@ int main() {
   ofstream ofs(file_name, ofstream::out);
 
   for (int n = 0; n < 10000; ++n) {
-    ofs << dis(gen) <<endl;
+    ofs << dis(gen) << endl;
   }
   ofs.close();
   return 0;
