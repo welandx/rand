@@ -1,5 +1,5 @@
 a=textread('Poisson.txt');
-x=0:8;
-y=poisspdf(x,1.9921);
-bar(x,y,1)
+x=-1:0.01:8;
+f=ksdensity(a,x)
+plot(x,f)
 mu=mean(a)

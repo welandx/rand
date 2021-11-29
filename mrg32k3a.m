@@ -1,6 +1,6 @@
 
 a=textread('mrg32k3a.txt');
-x=0:0.00001:0.99999;
-bar(x,a)
+[f,xi]=ksdensity(a)
+plot(xi,f)
 mu=mean(a)
 sigma=sqrt(var(a))
