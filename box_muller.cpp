@@ -26,7 +26,7 @@ int  main(int argc, char *argv[])
 {
   string file_name = "box_muller.txt";
   ofstream ofs(file_name, ofstream::out);
-  for (int i = 0; i < 1000; i++)
+  for (int i = 0; i < 100000; i++)
     ofs << generateGaussianNoise(0.5, 0.8) << endl;
 	return 0;
 }
